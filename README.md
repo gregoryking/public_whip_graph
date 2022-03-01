@@ -90,7 +90,7 @@ The following are the manually crafted export commands for the static and dynami
     UNION ALL
     SELECT * FROM pw_dyn_wiki_motion INTO OUTFILE '/backup/pw_dyn_wiki_motion.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
 
-The flat files are then available in the container's `/backup` folder for subsequent import into data importer.  The model and mapping `public_whip_neo4j_importer_model.json` is available in this repository.
+The flat files are then available in the container's `/backup` folder for subsequent import into data importer.  The model and mapping `public_whip_neo4j_importer_model.json` is available in this repository, along with a zip additionally containing the data.
 
 # Importing files that can't yet be mapped in Data Importer
 

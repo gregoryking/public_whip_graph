@@ -12,14 +12,14 @@ Download and incompress dumps and place them in ${HOME}/Downloads/mariadb/backup
 
 # Start docker container for Mariadb
 
-Run ./mariadb_docker.sh from this repo and note <container id>.
+Run ./mariadb_docker.sh from this repo and note `<container id>`.
 
 
 # Mariadb Commands to load dumps
 
 Exec into the container with a bash shell:
 
-    docker exec -it <container id>  /bin/bash
+    docker exec -it <container id> /bin/bash
 
 Run the following commands to load the dumps:
 
@@ -90,12 +90,11 @@ The following are the manually crafted export commands for the static and dynami
     UNION ALL
     SELECT * FROM pw_dyn_wiki_motion INTO OUTFILE '/backup/pw_dyn_wiki_motion.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
 
-The flat files are then available in the container's /backup folder for subsequent import into data importer.  The model and mapping public_whip_neo4j_importer_model.json is available in this repository.
+The flat files are then available in the container's `/backup` folder for subsequent import into data importer.  The model and mapping `public_whip_neo4j_importer_model.json` is available in this repository.
 
 # Importing files that can't yet be mapped in Data Importer
 
 Some of the files cannot yet be mapped to Data Importer because the mapping functionality is not yet sufficiently rich. An exmaple is the Policy Label and SUPPORTS relationship that links to a Division, as shown below:
-
 
 <Add image>
 

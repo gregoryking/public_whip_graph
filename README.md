@@ -96,7 +96,7 @@ The flat files are then available in the container's `/backup` folder for subseq
 
 Some of the files cannot yet be mapped to Data Importer because the mapping functionality is not yet sufficiently rich. An exmaple is the Policy Label and SUPPORTS relationship that links to a Division, as shown below:
 
-<Add image>
+![Model](./model.png)
 
 This requires that Data Importer support:
     

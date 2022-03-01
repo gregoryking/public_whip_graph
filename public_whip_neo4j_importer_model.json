@@ -1,0 +1,728 @@
+{
+  "version": "0.1.0-beta.1",
+  "graph": {
+    "nodes": [
+      {
+        "id": "n0",
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "caption": "Person"
+      },
+      {
+        "id": "n1",
+        "position": {
+          "x": 309.94790849877177,
+          "y": 0
+        },
+        "caption": "Member"
+      },
+      {
+        "id": "n2",
+        "position": {
+          "x": 0,
+          "y": -288.60924632329403
+        },
+        "caption": "Office"
+      },
+      {
+        "id": "n3",
+        "position": {
+          "x": 309.94790849877177,
+          "y": -288.60924632329403
+        },
+        "caption": "Division"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "n0",
+        "type": "ELECTED",
+        "fromId": "n0",
+        "toId": "n1"
+      },
+      {
+        "id": "n1",
+        "type": "HELD",
+        "fromId": "n0",
+        "toId": "n2"
+      },
+      {
+        "id": "n2",
+        "type": "VOTED",
+        "fromId": "n1",
+        "toId": "n3"
+      }
+    ]
+  },
+  "dataModel": {
+    "fileModel": {
+      "fileSchemas": {
+        "pw_mp.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "mp_id",
+              "type": "string",
+              "sample": "1",
+              "include": true
+            },
+            {
+              "name": "first_name",
+              "type": "string",
+              "sample": "Diane",
+              "include": true
+            },
+            {
+              "name": "last_name",
+              "type": "string",
+              "sample": "Abbott",
+              "include": true
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "constituency",
+              "type": "string",
+              "sample": "Hackney North and Stoke Newington",
+              "include": true
+            },
+            {
+              "name": "party",
+              "type": "string",
+              "sample": "Lab",
+              "include": true
+            },
+            {
+              "name": "entered_house",
+              "type": "string",
+              "sample": "1997-05-01",
+              "include": true
+            },
+            {
+              "name": "left_house",
+              "type": "string",
+              "sample": "2001-05-14",
+              "include": true
+            },
+            {
+              "name": "entered_reason",
+              "type": "string",
+              "sample": "general_election",
+              "include": true
+            },
+            {
+              "name": "left_reason",
+              "type": "string",
+              "sample": "general_election",
+              "include": true
+            },
+            {
+              "name": "person",
+              "type": "string",
+              "sample": "10001",
+              "include": true
+            },
+            {
+              "name": "house",
+              "type": "string",
+              "sample": "commons",
+              "include": true
+            },
+            {
+              "name": "gid",
+              "type": "string",
+              "sample": "uk.org.publicwhip/member/1",
+              "include": true
+            }
+          ]
+        },
+        "pw_division.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "division_id",
+              "type": "string",
+              "sample": "12379",
+              "include": true
+            },
+            {
+              "name": "valid",
+              "type": "string",
+              "sample": "1",
+              "include": true
+            },
+            {
+              "name": "division_date",
+              "type": "string",
+              "sample": "1997-05-22",
+              "include": true
+            },
+            {
+              "name": "division_number",
+              "type": "string",
+              "sample": "5",
+              "include": true
+            },
+            {
+              "name": "division_name",
+              "type": "string",
+              "sample": "Referendums (Scotland and Wales) Bill",
+              "include": true
+            },
+            {
+              "name": "source_url",
+              "type": "string",
+              "sample": "http://www.publications.parliament.uk/pa/cm199798/cmhansrd/vo970522/debtext/70522-21.htm",
+              "include": true
+            },
+            {
+              "name": "motion",
+              "type": "string",
+              "sample": "<p>Order read for resuming adjourned debate on amendment to the Question [21 May],  That the Bill be now read a Second time.\\\n<p>Which amendment was:  To leave out from 'That' to the end of the Question and to add instead thereof--\\\n<p>Question again proposed,  That the amendment be made.\\\n \\\n\\\n<p>Question put,  That the amendment be made:--\\\n<p>The House divided:  Ayes 155, Noes 406.\\\n",
+              "include": true
+            },
+            {
+              "name": "notes",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "debate_url",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "source_gid",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "debate_gid",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "house",
+              "type": "string",
+              "sample": "commons",
+              "include": true
+            },
+            {
+              "name": "clock_time",
+              "type": "string",
+              "sample": "\\N",
+              "include": true
+            }
+          ]
+        },
+        "pw_moffice.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "moffice_id",
+              "type": "string",
+              "sample": "54042936",
+              "include": true
+            },
+            {
+              "name": "dept",
+              "type": "string",
+              "sample": "HM Treasury",
+              "include": true
+            },
+            {
+              "name": "position",
+              "type": "string",
+              "sample": "PPS (Rt Hon Dawn Primarolo, Paymaster General)",
+              "include": true
+            },
+            {
+              "name": "from_date",
+              "type": "string",
+              "sample": "2005-11-10",
+              "include": true
+            },
+            {
+              "name": "to_date",
+              "type": "string",
+              "sample": "2006-09-06",
+              "include": true
+            },
+            {
+              "name": "person",
+              "type": "string",
+              "sample": "11267",
+              "include": true
+            },
+            {
+              "name": "responsibility",
+              "type": "string",
+              "sample": "",
+              "include": true
+            }
+          ]
+        },
+        "pw_vote.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "division_id",
+              "type": "string",
+              "sample": "10387",
+              "include": true
+            },
+            {
+              "name": "mp_id",
+              "type": "string",
+              "sample": "687",
+              "include": true
+            },
+            {
+              "name": "vote",
+              "type": "string",
+              "sample": "no",
+              "include": true
+            }
+          ]
+        }
+      }
+    },
+    "graphModel": {
+      "nodeSchemas": {
+        "n0": {
+          "label": "Person",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "first_name",
+              "type": "string",
+              "identifier": "dd22edfe-b76a-43f8-8c41-2a8537795cf1"
+            },
+            {
+              "property": "last_name",
+              "type": "string",
+              "identifier": "0a4ce321-7a43-4454-8fff-4f7ceba02d4a"
+            },
+            {
+              "property": "title",
+              "type": "string",
+              "identifier": "ceeac460-3dc8-43ff-b27c-ca154e984c71"
+            },
+            {
+              "property": "person",
+              "type": "string",
+              "identifier": "04b62bc6-7b4c-442e-ae5e-3a0da1ffcbc3"
+            }
+          ],
+          "key": {
+            "properties": [
+              "04b62bc6-7b4c-442e-ae5e-3a0da1ffcbc3"
+            ],
+            "name": ""
+          }
+        },
+        "n1": {
+          "label": "Member",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "mp_id",
+              "type": "string",
+              "identifier": "79113061-d7fb-447c-b5f3-7ce96c2037fa"
+            },
+            {
+              "property": "constituency",
+              "type": "string",
+              "identifier": "e480969e-a458-4b7c-94a7-390e5ecd58d2"
+            },
+            {
+              "property": "party",
+              "type": "string",
+              "identifier": "8cf20a90-30bb-4172-975c-683801422eeb"
+            },
+            {
+              "property": "entered_house",
+              "type": "string",
+              "identifier": "d1038141-0efb-411b-b90c-92c0e6aa4dd9"
+            },
+            {
+              "property": "left_house",
+              "type": "string",
+              "identifier": "fcaf55e8-ece3-4eb2-a787-a919c2d7831e"
+            },
+            {
+              "property": "entered_reason",
+              "type": "string",
+              "identifier": "a1dd49d9-b9e8-4752-a7ab-41858c5bbb96"
+            },
+            {
+              "property": "left_reason",
+              "type": "string",
+              "identifier": "5e77f19b-2971-4570-b58f-f2295dd078bf"
+            },
+            {
+              "property": "house",
+              "type": "string",
+              "identifier": "f32d9b2f-8ac7-48a6-ba21-8442b3b4dfed"
+            },
+            {
+              "property": "gid",
+              "type": "string",
+              "identifier": "d7437c15-7648-4d1f-ae66-6b607e978544"
+            }
+          ],
+          "key": {
+            "properties": [
+              "79113061-d7fb-447c-b5f3-7ce96c2037fa"
+            ],
+            "name": ""
+          }
+        },
+        "n2": {
+          "label": "Office",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "moffice_id",
+              "type": "string",
+              "identifier": "14b030ea-24f7-4b07-80ac-4530d0fd31cf"
+            },
+            {
+              "property": "dept",
+              "type": "string",
+              "identifier": "7e403fdf-7a3b-4e68-8d0b-b292398bc4d9"
+            },
+            {
+              "property": "position",
+              "type": "string",
+              "identifier": "71ad6971-ea04-4051-8113-885c8f8de047"
+            },
+            {
+              "property": "person",
+              "type": "string",
+              "identifier": "d17784ad-1a5e-4233-8577-3fc68fba7b54"
+            },
+            {
+              "property": "responsibility",
+              "type": "string",
+              "identifier": "671c570d-38b5-45ed-a819-8ec89c090017"
+            }
+          ],
+          "key": {
+            "properties": [
+              "14b030ea-24f7-4b07-80ac-4530d0fd31cf"
+            ],
+            "name": ""
+          }
+        },
+        "n3": {
+          "label": "Division",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "division_id",
+              "type": "string",
+              "identifier": "c5386054-7877-497c-a3cb-7ab90ce1ce0d"
+            },
+            {
+              "property": "valid",
+              "type": "string",
+              "identifier": "3c5363ba-5442-4733-9642-563ac804ec1f"
+            },
+            {
+              "property": "division_date",
+              "type": "string",
+              "identifier": "64c92642-eb96-475e-b728-4c4a0c62276d"
+            },
+            {
+              "property": "division_number",
+              "type": "string",
+              "identifier": "0beccd86-806a-427f-8a14-feae9abc3ec0"
+            },
+            {
+              "property": "division_name",
+              "type": "string",
+              "identifier": "6b7839c4-feb4-4dd5-93df-c4d16351536b"
+            },
+            {
+              "property": "source_url",
+              "type": "string",
+              "identifier": "3302e13e-0074-40f5-8b6b-7f48521a6c8d"
+            },
+            {
+              "property": "motion",
+              "type": "string",
+              "identifier": "54f7e4d0-8bf3-4d15-b9a3-22ca47b7b116"
+            },
+            {
+              "property": "notes",
+              "type": "string",
+              "identifier": "5930bec4-8c07-43f3-9094-0131d8d31bea"
+            },
+            {
+              "property": "debate_url",
+              "type": "string",
+              "identifier": "fac4f475-2f55-445a-b526-d5ee708e1c6a"
+            },
+            {
+              "property": "source_gid",
+              "type": "string",
+              "identifier": "feb50b0b-7e71-4c22-a0d2-76676d16bb7e"
+            },
+            {
+              "property": "debate_gid",
+              "type": "string",
+              "identifier": "41a5b0ad-d823-4002-8ffb-7172ce3efbeb"
+            },
+            {
+              "property": "house",
+              "type": "string",
+              "identifier": "fcb47189-7ae7-4e4c-90a2-3d0fa7a48443"
+            },
+            {
+              "property": "clock_time",
+              "type": "string",
+              "identifier": "517e85a7-1415-4bfc-9091-2ed75a51fbce"
+            }
+          ],
+          "key": {
+            "properties": [
+              "c5386054-7877-497c-a3cb-7ab90ce1ce0d"
+            ],
+            "name": ""
+          }
+        }
+      },
+      "relationshipSchemas": {
+        "n0": {
+          "type": "ELECTED",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n1",
+          "properties": []
+        },
+        "n1": {
+          "type": "HELD",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n2",
+          "properties": [
+            {
+              "property": "from_date",
+              "type": "string",
+              "identifier": "2c1236fa-7659-4848-a850-4f19f460bccc"
+            },
+            {
+              "property": "to_date",
+              "type": "string",
+              "identifier": "f05edc39-76e5-4f61-9b45-06ebe9d60079"
+            }
+          ]
+        },
+        "n2": {
+          "type": "VOTED",
+          "sourceNodeSchema": "n1",
+          "targetNodeSchema": "n3",
+          "properties": [
+            {
+              "property": "vote",
+              "type": "string",
+              "identifier": "f7452cab-cd3d-484b-8e06-df190b702fb9"
+            }
+          ]
+        }
+      }
+    },
+    "mappingModel": {
+      "nodeMappings": {
+        "n0": {
+          "nodeSchema": "n0",
+          "fileSchema": "pw_mp.csv",
+          "mappings": [
+            {
+              "field": "first_name"
+            },
+            {
+              "field": "last_name"
+            },
+            {
+              "field": "title"
+            },
+            {
+              "field": "person"
+            }
+          ]
+        },
+        "n1": {
+          "nodeSchema": "n1",
+          "fileSchema": "pw_mp.csv",
+          "mappings": [
+            {
+              "field": "mp_id"
+            },
+            {
+              "field": "constituency"
+            },
+            {
+              "field": "party"
+            },
+            {
+              "field": "entered_house"
+            },
+            {
+              "field": "left_house"
+            },
+            {
+              "field": "entered_reason"
+            },
+            {
+              "field": "left_reason"
+            },
+            {
+              "field": "house"
+            },
+            {
+              "field": "gid"
+            }
+          ]
+        },
+        "n2": {
+          "nodeSchema": "n2",
+          "fileSchema": "pw_moffice.csv",
+          "mappings": [
+            {
+              "field": "moffice_id"
+            },
+            {
+              "field": "dept"
+            },
+            {
+              "field": "position"
+            },
+            {
+              "field": "person"
+            },
+            {
+              "field": "responsibility"
+            }
+          ]
+        },
+        "n3": {
+          "nodeSchema": "n3",
+          "fileSchema": "pw_division.csv",
+          "mappings": [
+            {
+              "field": "division_id"
+            },
+            {
+              "field": "valid"
+            },
+            {
+              "field": "division_date"
+            },
+            {
+              "field": "division_number"
+            },
+            {
+              "field": "division_name"
+            },
+            {
+              "field": "source_url"
+            },
+            {
+              "field": "motion"
+            },
+            {
+              "field": "notes"
+            },
+            {
+              "field": "debate_url"
+            },
+            {
+              "field": "source_gid"
+            },
+            {
+              "field": "debate_gid"
+            },
+            {
+              "field": "house"
+            },
+            {
+              "field": "clock_time"
+            }
+          ]
+        }
+      },
+      "relationshipMappings": {
+        "n0": {
+          "relationshipSchema": "n0",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "person"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "mp_id"
+            }
+          ],
+          "fileSchema": "pw_mp.csv"
+        },
+        "n1": {
+          "relationshipSchema": "n1",
+          "mappings": [
+            {
+              "field": "from_date"
+            },
+            {
+              "field": "to_date"
+            }
+          ],
+          "sourceMappings": [
+            {
+              "field": "person"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "moffice_id"
+            }
+          ],
+          "fileSchema": "pw_moffice.csv"
+        },
+        "n2": {
+          "relationshipSchema": "n2",
+          "mappings": [
+            {
+              "field": "vote"
+            }
+          ],
+          "sourceMappings": [
+            {
+              "field": "mp_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "division_id"
+            }
+          ],
+          "fileSchema": "pw_vote.csv"
+        }
+      }
+    }
+  }
+}

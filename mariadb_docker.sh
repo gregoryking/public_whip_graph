@@ -1,0 +1,1 @@
+docker run --detach --name some-mariadb -p 3306:3306 -v ${HOME}/Downloads/mariadb/datadir:/var/lib/mysql -v ${HOME}/Downloads/mariadb/backupdir:/backup --env MARIADB_USER=example-user --env MARIADB_PASSWORD=my_cool_secret --env MARIADB_ROOT_PASSWORD=my-secret-pw  mariadb:latest

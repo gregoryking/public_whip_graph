@@ -4,7 +4,7 @@ Note: Could automate the below, but adding manual steps initially for convenince
 
 # Public whip Mariadb database dumps
 
-Download and incompress dumps and place them in ${HOME}/Downloads/mariadb/backupdir:
+Download and uncompress dumps, place them in ${HOME}/Downloads/mariadb/backupdir:
 
     https://www.publicwhip.org.uk/data/pw_static_tables.sql.bz2
     https://www.publicwhip.org.uk/data/pw_dynamic_tables.sql.bz2
@@ -12,7 +12,7 @@ Download and incompress dumps and place them in ${HOME}/Downloads/mariadb/backup
 
 # Start docker container for Mariadb
 
-Run ./mariadb_docker.sh from this repo and note `<container id>`.
+Run ./mariadb_docker.sh file from this repo and note `<container id>`.
 
 
 # Mariadb Commands to load dumps

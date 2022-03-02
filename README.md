@@ -73,7 +73,7 @@ The following are the manually crafted export commands for the static and dynami
 
     SELECT 'division_id','valid','division_date','division_number','division_name','source_url','motion','notes','debate_url','source_gid','debate_gid','house','clock_time'
     UNION ALL
-    SELECT * FROM pw_division INTO OUTFILE '/backup/pw_division.csv' FIELDS TERMINATED BY CHAR(30) ENCLOSED BY '"' LINES TERMINATED BY '\n';
+    SELECT * FROM pw_division INTO OUTFILE '/backup/pw_division.csv' FIELDS TERMINATED BY 0x1e ENCLOSED BY '"' LINES TERMINATED BY '\n';
 
     SELECT 'moffice_id','dept','position','from_date','to_date','person','responsibility'
     UNION ALL

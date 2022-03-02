@@ -21,11 +21,15 @@ Exec into the container with a bash shell:
 
     docker exec -it <container id> /bin/bash
 
+Create the public whip database:
+
+    mysql --user root --password -e "CREATE DATABASE public_whip"
+
 Run the following commands to load the dumps:
 
-    mysql --user root --password < /backup/pw_static_tables.sql
-    mysql --user root --password < /backup/pw_dynamic_tables.sql
-    mysql --user root --password < /backup/pw_cache_tables.sql
+    mysql --user root --password public_whip < /backup/pw_static_tables.sql
+    mysql --user root --password public_whip < /backup/pw_dynamic_tables.sql
+    mysql --user root --password public_whip < /backup/pw_cache_tables.sql
 
 # Export tables to CSV
 
@@ -56,20 +60,24 @@ The following are the manually crafted export commands for the static and dynami
 
     SELECT 'mp_id','first_name','last_name','title','constituency','party','entered_house','left_house','entered_reason','left_reason','person','house','gid'
     UNION ALL
-    SELECT * FROM pw_mp INTO OUTFILE '/backup/pw_mp.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
+    SELECT * FROM pw_mp INTO OUTFILE '/backup/pw_mp.csv' FIELDS TERMINATED BY 0x1e ENCLOSED BY '"' LINES TERMINATED BY '\n';
 
     SELECT 'division_id','mp_id','vote'
     UNION ALL
-    SELECT * FROM pw_vote INTO OUTFILE '/backup/pw_vote.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
+    SELECT * FROM pw_vote INTO OUTFILE '/backup/pw_vote.csv' FIELDS TERMINATED BY 0x1e ENCLOSED BY '"' LINES TERMINATED BY '\n';
 
 
     SELECT 'division_id','valid','division_date','division_number','division_name','source_url','motion','notes','debate_url','source_gid','debate_gid','house','clock_time'
     UNION ALL
-    SELECT * FROM pw_division INTO OUTFILE '/backup/pw_division.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
+    SELECT * FROM pw_division INTO OUTFILE '/backup/pw_division.csv' FIELDS TERMINATED BY 0x1e ENCLOSED BY '"' LINES TERMINATED BY '\n';
+
+    SELECT 'division_id','valid','division_date','division_number','division_name','source_url','motion','notes','debate_url','source_gid','debate_gid','house','clock_time'
+    UNION ALL
+    SELECT * FROM pw_division INTO OUTFILE '/backup/pw_division.csv' FIELDS TERMINATED BY CHAR(30) ENCLOSED BY '"' LINES TERMINATED BY '\n';
 
     SELECT 'moffice_id','dept','position','from_date','to_date','person','responsibility'
     UNION ALL
-    SELECT * FROM pw_moffice INTO OUTFILE '/backup/pw_moffice.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
+    SELECT * FROM pw_moffice INTO OUTFILE '/backup/pw_moffice.csv' FIELDS TERMINATED BY 0x1e ENCLOSED BY '"' LINES TERMINATED BY '\n';
 
 
     // -- Dynamic tables
@@ -80,15 +88,15 @@ The following are the manually crafted export commands for the static and dynami
 
     SELECT 'dream_id','name','user_id','description','private' 
     UNION ALL
-    SELECT * FROM pw_dyn_dreammp INTO OUTFILE '/backup/pw_dyn_dreammp.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
+    SELECT * FROM pw_dyn_dreammp INTO OUTFILE '/backup/pw_dyn_dreammp.csv' FIELDS TERMINATED BY 0x1e ENCLOSED BY '"' LINES TERMINATED BY '\n';
 
     SELECT 'division_date','division_number','dream_id','vote','house'
     UNION ALL
-    SELECT * FROM pw_dyn_dreamvote INTO OUTFILE '/backup/pw_dyn_dreamvote.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
+    SELECT * FROM pw_dyn_dreamvote INTO OUTFILE '/backup/pw_dyn_dreamvote.csv' FIELDS TERMINATED BY 0x1e ENCLOSED BY '"' LINES TERMINATED BY '\n';
 
     SELECT 'wiki_id','text_body','user_id','edit_date','division_date','division_number','house'
     UNION ALL
-    SELECT * FROM pw_dyn_wiki_motion INTO OUTFILE '/backup/pw_dyn_wiki_motion.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
+    SELECT * FROM pw_dyn_wiki_motion INTO OUTFILE '/backup/pw_dyn_wiki_motion.csv' FIELDS TERMINATED BY 0x1e ENCLOSED BY '"' LINES TERMINATED BY '\n';
 
 The flat files are then available in the container's `/backup` folder for subsequent import into data importer.  The model and mapping `public_whip_neo4j_importer_model.json` is available in this repository, along with a zip which additionally containins the data.
 

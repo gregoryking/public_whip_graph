@@ -1,0 +1,205 @@
+{
+    "policySets": [
+        {
+            "name": "summary",
+            "description": "",
+            "divisions": [
+                1113,
+                1136,
+                1132,
+                1052,
+                1109,
+                1110,
+                1027,
+                1084,
+                1065,
+                6670,
+                6673,
+                6674,
+                6678,
+                984,
+                837,
+                1079,
+                6671,
+                6672,
+            ]
+        },
+        {
+            "name": "social",
+            "description": "Social Issues",
+            "divisions": [
+                826,
+                811,
+                1050,
+                6686,
+                6703,
+                6732,
+            ]
+        },
+        {
+            "name": "foreignpolicy",
+            "description": "Foreign Policy and Defence",
+            "divisions": [
+                6688,
+                1049,
+                975,
+                984,
+                1065,
+                1027,
+                6706,
+                6764,
+                6761,
+                6757,
+            ]
+        },
+        {
+            "name": "welfare",
+            "description": "Welfare and Benefits",
+            "divisions": [
+                6672,
+                6674,
+                6673,
+                6684,
+                6670,
+                6702,
+            ]
+        },
+        {
+            "name": "taxation",
+            "description": "Taxation and Employment",
+            "divisions": [
+                6680,
+                1110,
+                6694,
+                6699,
+                6693,
+                6681,
+                1109,
+                1124,
+                6685,
+                6733,
+                6711,
+                6716,
+                6731,
+                6754,
+            ]
+        },
+        {
+            "name": "business",
+            "description": "Business and the Economy",
+            "divisions": [
+                6679,
+                6690,
+                6691,
+                6753,
+            ]
+        },
+        {
+            "name": "health",
+            "description": "Health",
+            "divisions": [
+                6677,
+                6676,
+                363,
+                811,
+                6732,
+            ]
+        },
+        {
+            "name": "education",
+            "description": "Education",
+            "divisions": [
+                1074,
+                1132,
+                6687,
+                6682,
+                1052
+            ]
+        },
+        {
+            "name": "reform",
+            "description": "Constitutional Reform",
+            "divisions": [
+                6671,
+                1113,
+                1136,
+                996,
+                1084,
+                837,
+                6683,
+                6678,
+                6698,
+                1079,
+                6708,
+                6709,
+                6695,
+                6736,
+                842,
+            ]
+        },
+        {
+            "name": "home",
+            "description": "Home Affairs",
+            "divisions": [
+                1087,
+                1071,
+                1051,
+                6696,
+                6721,
+                6734,
+                6751,
+                6758,
+            ]
+        },
+        {
+            "name": "environment",
+            "description": "Environmental Issues'",
+            "divisions": [
+                1030,
+                6693,
+                6697,
+                6699,
+                6704,
+                6710,
+                6741,
+                6753,
+            ]
+        },
+        {
+            "name": "transport",
+            "description": "Transport",
+            "divisions": [
+                6747,
+                6692,
+                6693,
+                6699,
+                6746,
+            ]
+        },
+        {
+            "name": "housing",
+            "description": "Housing",
+            "divisions": [
+                6744,
+                6743,
+            ]
+        },
+        {
+            "name": "misc",
+            "description": "Miscellaneous Topics",
+            "divisions": [
+                810,
+                1120,
+                1053,
+                1105,
+                6705,
+                6707,
+                6715,
+                6720,
+                6719,
+                6718,
+                6667,
+            ]
+        }
+    ]
+}

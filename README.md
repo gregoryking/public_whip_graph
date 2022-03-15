@@ -418,9 +418,7 @@ In the interim, the following LOAD CSV commands can be used:
     MATCH (d:Division {division_number: row.division_number, division_date: row.division_date, house: row.house}), (p:Policy {dream_id: row.dream_id})
     MERGE (d)-[:SUPPORTS {vote: row.vote}]->(p);
 
-<!-- Need to add WikiEdit to data importer config -->
-
-
+    // Create WikiEdit nodes and edited rels
     LOAD CSV WITH HEADERS FROM 'file:///pw_dyn_wiki_motion.csv' as row
     FIELDTERMINATOR '\u001e'
     MATCH (d:Division {division_number: row.division_number, division_date: row.division_date, house: row.house}), (w:WikiEdit {wiki_id: row.wiki_id})

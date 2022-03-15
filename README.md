@@ -441,7 +441,7 @@ Load Policy Sets from :param (policies.json) and create relationships to Policie
     UNWIND $policySets as policySet
     MERGE (ps:PolicySet {name: policySet.name, description:policySet.description})
     WITH policySet, ps
-    UNWIND policySet.policies as policy
+    UNWIND policySet.divisions as policy
     MATCH (p:Policy {dream_id: toString(toInteger(policy))})
     MERGE (p)-[:PART_OF_SET]->(ps)
 

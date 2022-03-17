@@ -456,3 +456,24 @@ Query to set node sized for PolicySets and Policies based on number of votes the
     UNWIND policSetPolicyDivisionCountSet as policSetPolicyDivisionCount
     WITH policSetPolicyDivisionCount[1] as policy, policSetPolicyDivisionCount[2] as policyDivisionCount
     SET policy.nodeSize = policyDivisionCount
+
+
+
+GCP Named Entity Recognition
+
+
+    CALL apoc.periodic.iterate("
+    MATCH (i:Interest)
+    RETURN i", "
+    CALL apoc.nlp.gcp.entities.graph(i, {
+        key: apoc.static.get("gcp.apiKey"),
+        nodeProperty: 'item',
+        writeRelationshipType: 'GCP_ENTITY',
+        write:true
+    })
+    YIELD graph
+    RETURN distinct 'done'", {
+        batchSize: 20,
+        params: { apiKey: apoc.static.get("gcp.apiKey") }
+    }
+    );

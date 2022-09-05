@@ -1,5 +1,5 @@
 
-Note: Could automate the below, but adding manual steps initially for convenince
+Note: Could automate the below, but adding manual steps initially for expedience
 
 
 # Public whip Mariadb database dumps
